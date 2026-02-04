@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Feedback - Contact Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Astrologer Registration Portal</h1>
+            <p class="subtitle">Submit your astrologer details to our admin</p>
+        </header>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Register</a></li>
+                <li><a href="inquiry.html">General Inquiry</a></li>
+                <li><a href="feedback.html" class="active">Send Feedback</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <form id="feedbackForm" class="form-container">
+                <fieldset>
+                    <legend>Send Feedback</legend>
+
+                    <div class="form-group">
+                        <label for="feedbackName">Your Name *</label>
+                        <input 
+                            type="text" 
+                            id="feedbackName" 
+                            name="feedbackName" 
+                            placeholder="Enter your name"
+                            required
+                        >
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackEmail">Email Address *</label>
+                        <input 
+                            type="email" 
+                            id="feedbackEmail" 
+                            name="feedbackEmail" 
+                            placeholder="your.email@example.com"
+                            required
+                        >
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackType">Feedback Type *</label>
+                        <select id="feedbackType" name="feedbackType" required>
+                            <option value="">-- Select Feedback Type --</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="compliment">Compliment</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackRating">Rate Your Experience (Optional)</label>
+                        <div class="rating-group">
+                            <label class="radio-label">
+                                <input type="radio" name="feedbackRating" value="5">
+                                ⭐⭐⭐⭐⭐ Excellent
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="feedbackRating" value="4">
+                                ⭐⭐⭐⭐ Good
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="feedbackRating" value="3">
+                                ⭐⭐⭐ Average
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="feedbackRating" value="2">
+                                ⭐⭐ Poor
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="feedbackRating" value="1">
+                                ⭐ Very Poor
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackMessage">Your Feedback *</label>
+                        <textarea 
+                            id="feedbackMessage" 
+                            name="feedbackMessage"
+                            rows="5"
+                            placeholder="Please share your feedback with us..."
+                            required
+                        ></textarea>
+                        <small>Character count: <span id="charCount">0</span>/1000</small>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group checkbox-single">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="followUp" name="followUp">
+                            I would like a follow-up response
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit">Submit Feedback</button>
+                    <button type="reset" class="btn btn-reset">Clear Form</button>
+                </div>
+
+                <div id="feedbackSuccessMessage" class="success-message" style="display: none;">
+                    <p>Thank you for your feedback! We appreciate your input and will use it to improve our service.</p>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Astrologer Portal. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

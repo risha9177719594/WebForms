@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrologer Registration - Contact Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Astrologer Registration Portal</h1>
+            <p class="subtitle">Submit your astrologer details to our admin</p>
+        </header>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Register</a></li>
+                <li><a href="inquiry.html">General Inquiry</a></li>
+                <li><a href="feedback.html">Send Feedback</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <form id="astrologerForm" class="form-container">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            placeholder="Enter your full name"
+                            required
+                        >
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Age *</label>
+                            <input 
+                                type="number" 
+                                id="age" 
+                                name="age" 
+                                placeholder="Enter your age"
+                                min="18"
+                                max="120"
+                                required
+                            >
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">-- Select Gender --</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="your.email@example.com"
+                            required
+                        >
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="+1 (555) 123-4567"
+                            required
+                        >
+                        <span class="error-message"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Professional Details</legend>
+
+                    <div class="form-group">
+                        <label for="specialization">Specialization *</label>
+                        <select id="specialization" name="specialization" required>
+                            <option value="">-- Select Specialization --</option>
+                            <option value="vedic">Vedic Astrology</option>
+                            <option value="western">Western Astrology</option>
+                            <option value="numerology">Numerology</option>
+                            <option value="palmistry">Palmistry</option>
+                            <option value="tarot">Tarot Reading</option>
+                            <option value="vaastu">Vaastu</option>
+                            <option value="nadi">Nadi Astrology</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Years of Experience *</label>
+                        <input 
+                            type="number" 
+                            id="experience" 
+                            name="experience" 
+                            placeholder="Enter years of experience"
+                            min="0"
+                            max="70"
+                            required
+                        >
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="qualifications">Qualifications/Certifications</label>
+                        <textarea 
+                            id="qualifications" 
+                            name="qualifications"
+                            rows="3"
+                            placeholder="List your degrees, certifications, or training..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="consultationModes">Consultation Modes *</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consultationModes" value="phone">
+                                Phone
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consultationModes" value="video">
+                                Video Call
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consultationModes" value="chat">
+                                Chat/Text
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="consultationModes" value="inperson">
+                                In-Person
+                            </label>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="languages">Languages Spoken *</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="languages" value="english">
+                                English
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="languages" value="hindi">
+                                Hindi
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="languages" value="spanish">
+                                Spanish
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="languages" value="french">
+                                French
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="languages" value="other">
+                                Other
+                            </label>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+
+                    <div class="form-group">
+                        <label for="website">Website/Blog (Optional)</label>
+                        <input 
+                            type="url" 
+                            id="website" 
+                            name="website" 
+                            placeholder="https://yourwebsite.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="additionalInfo">Additional Information</label>
+                        <textarea 
+                            id="additionalInfo" 
+                            name="additionalInfo"
+                            rows="4"
+                            placeholder="Tell us more about your practice, achievements, or anything else you'd like us to know..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-single">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agree" name="agree" required>
+                            I agree to the terms and conditions and consent to be contacted by admin
+                        </label>
+                        <span class="error-message"></span>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit">Submit Application</button>
+                    <button type="reset" class="btn btn-reset">Clear Form</button>
+                </div>
+
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <p>Thank you! Your application has been submitted successfully. Our admin will review it and contact you soon.</p>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Astrologer Portal. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
